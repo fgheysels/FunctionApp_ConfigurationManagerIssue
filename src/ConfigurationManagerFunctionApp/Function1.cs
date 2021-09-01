@@ -9,7 +9,7 @@ namespace ConfigurationManagerFunctionApp
     public static class Function1
     {
         [FunctionName("Function1")]
-        public static void Run([TimerTrigger("0 */1 * * * *")]TimerInfo myTimer, ILogger log)
+        public static void Run([TimerTrigger("*/2 * * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
             throw new ConfigurationErrorsException("Some test");
